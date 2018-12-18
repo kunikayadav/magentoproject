@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <templates>
+            <title>Templates</title>
+            <sort_order>71</sort_order>
+            <children>
+                <news translate="title" module="news">
+                    <title>FAQ</title>
+                    <sort_order>2021</sort_order>
+                    <children>
+                        <news>
+                            <title>Manage FAQ</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/news_index/index</action>
+                        </news>
+                    </children>
+                </news>
+            </children>
+        </templates>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <news translate="title" module="news">
+                                        <title>FAQ Settings</title>
+                                    </news>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <templates>
+                        <title>Templatas</title>
+                        <sort_order>71</sort_order>
+                        <children>
+                            <news translate="title" module="news">
+                                <title>FAQ</title>
+                                <sort_order>2021</sort_order>
+                                <children>
+                                    <news>
+                                        <title>Manage FAQ</title>
+                                        <sort_order>10</sort_order>
+                                        <children>
+                                            <save translate="title">
+                                                <title>Save</title>
+                                                <sort_order>0</sort_order>
+                                            </save>
+                                            <delete translate="title">
+                                                <title>Delete</title>
+                                                <sort_order>10</sort_order>
+                                            </delete>
+                                            <approve translate="title">
+                                                <title>Approve</title>
+                                                <sort_order>10</sort_order>
+                                            </approve>
+                                        </children>
+                                    </news>
+                                </children>
+                            </news>
+                        </children>
+                    </templates>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

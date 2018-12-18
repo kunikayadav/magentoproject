@@ -1,0 +1,14 @@
+<?php
+//echo $this->helper('checkout/url')->hii();
+?>
+<form action="<?php echo $this->getUrl('news/index/hello'); ?>"
+      method="post" class="testimonialForm" id="testimonialForm">
+    <h2 class="legend">SUBMIT YOUR QUESTION</h2><br>
+    Question: <input type="text" id="name" name="title" title="<?php echo $this->__('Title') ?>" class="input-text required-entry"/><br></br>
+
+     <!--<input type="text" id="post" name="post" title="<?php //echo $this->__('Post') ?>" class="input-text required-entry"/><br></br>-->
+    <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
+    <!--<button class="button" onclick="setLocation('<?php /*echo $this->getUrl('news/index/sayhello'); */?>')">
+            <span><span><?php /*echo $this->__('Submit') */?></span></span>
+        </button>-->
+</form>

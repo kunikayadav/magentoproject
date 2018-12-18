@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_news_index_index>
+        <reference name="content">
+            <block type="test/adminhtml_page" name="news_list"/>
+        </reference>
+    </adminhtml_news_index_index>
+
+    <adminhtml_news_index_new>
+        <update handle="adminhtml_news_index_edit" />
+    </adminhtml_news_index_new>
+
+    <adminhtml_news_index_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="test/adminhtml_page_edit" name="news_page_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="test/adminhtml_page_edit_tabs" name="news_page_edit_tabs">
+                <block type="test/adminhtml_page_edit_tab_main" name="news_page_edit_tab_main" />
+                <action method="addTab">
+                    <name>main_section</name>
+                    <block>news_page_edit_tab_main</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_news_index_edit>
+</layout>

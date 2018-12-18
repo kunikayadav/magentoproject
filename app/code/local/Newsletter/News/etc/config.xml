@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Newsletter_News>
+            <version>0.1.1</version>
+        </Newsletter_News>
+    </modules>
+
+    <frontend>
+        <routers>
+            <Newsletter_News_SomeFreeRouterName1>
+                <use>standard</use>
+                <args>
+                    <module>Newsletter_News</module>
+                    <frontName>News</frontName>
+                </args>
+            </Newsletter_News_SomeFreeRouterName1>
+            <News>
+                <use>standard</use>
+                <args>
+                    <module>Newsletter_News</module>
+                    <frontName>news</frontName>
+                </args>
+            </News>
+        </routers>
+
+        <layout>
+            <updates>
+                <test>
+                    <file>test.xml</file>
+                </test>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <blocks>
+            <test>
+                <class>Newsletter_News_Block</class>
+            </test>
+        </blocks>
+        <helpers>
+            <news>
+                <class>Newsletter_News_Helper</class>
+            </news>
+        </helpers>
+
+        <models>
+            <news>
+                <class>Newsletter_News_Model</class>
+                <resourceModel>news_resource</resourceModel>
+            </news>
+            <news_resource>
+                <class>Newsletter_News_Model_Resource</class>
+                <entities>
+                    <newspost>
+                        <table>news_posts</table>
+                    </newspost>
+                </entities>
+            </news_resource>
+        </models>
+
+        <resources>
+            <news_setup>
+                <setup>
+                    <module>Newsletter_News</module>
+                    <class>Newsletter_News_Model_Resource_Setup</class>
+                </setup>
+            </news_setup>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <newsletter_news before="Mage_Adminhtml">Newsletter_News_Adminhtml</newsletter_news>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <test>
+                    <file>test.xml</file>
+                </test>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

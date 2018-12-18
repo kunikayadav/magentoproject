@@ -1,0 +1,39 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="content">
+            <reference name="top.links">
+                <action method="addLink" translate="label title" module="news" ifconfig="news/general/top_links">
+                    <label>FAQ</label>
+                    <url>news/index/sayhello</url>
+                    <title>FAQ</title>
+                    <prepare>true</prepare>
+                    <urlParams/>
+                    <position>200</position>
+                </action>
+            </reference>
+            <reference name="footer_links">
+                <action method="addLink" translate="label title" module="news" ifconfig="news/general/footer_links">
+                    <label>FAQ</label>
+                    <url>news/index/sayhello</url>
+                    <title>FAQ</title>
+                    <prepare>true</prepare>
+                    <urlParams/>
+                    <position>200</position>
+                </action>
+            </reference>
+            <!--<block type="test/monblock" name="afficher_monbloc" template="test/afficher.phtml" before="-"/>-->
+        </reference>
+    </default>
+    <news_index_sayhello>
+        <reference name="content">
+            <block type="test/monblock" name="afficher_monblock" template="test/afficher.phtml" />
+        </reference>
+    </news_index_sayhello>
+
+    <news_index_hello>
+        <reference name="content">
+            <block type="test/monblock" name="afficher_monbloc" template="test/form.phtml" />
+        </reference>
+    </news_index_hello>
+</layout>
+

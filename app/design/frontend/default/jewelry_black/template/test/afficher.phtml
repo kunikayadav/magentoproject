@@ -1,0 +1,20 @@
+<!--<h1>Hello</h1>
+<!--<img src="http://127.0.0.1/magento1/magento-mirror-1.9.3.9/laptop.jpg" height="300" width="300">-->
+
+<?php $allBlogs = $helper = Mage::helper('news')->getAllBlog();
+foreach($allBlogs as $blog){?>
+    <ul>
+        <li><?php echo $blog['newspost_id']?></li>
+        <li><?php echo $blog['title'];?></li>
+        <li><?php echo $blog['post'];?></li>
+        <li><?php echo $blog['updated_at'];?></li>
+        <li><?php echo $blog['created_at'];?></li>
+    </ul>
+
+<?php }
+?>
+<div class="submit-testimonial">
+    <button class="button" onclick="setLocation('<?php echo $this->getUrl('news/index/hello'); ?>')">
+        <span><span><?php echo $this->__('Ask New Question') ?></span></span>
+    </button>
+</div>
